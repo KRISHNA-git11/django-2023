@@ -1,0 +1,24 @@
+{% extends 'main.html' %}
+
+
+{% block content %}
+    <div>
+        <h1>
+            List of Projects available are
+        </h1>
+
+        <ul>
+            {% for project in projects %}
+            <li>
+                <p>
+                    <a href="{% url 'project' project.id %}">{{project.name}}</a>
+                </p>
+            </li>
+            {% endfor %}
+        </ul>
+
+
+    </div>
+
+{% endblock content %}
+
